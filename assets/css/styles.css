@@ -1,0 +1,47 @@
+
+:root {
+    --primary-color: #6C63FF; /* morado */ 
+    --secondary-color: #5a52d5; /* azul morado secundary*/
+    --bg-light: #f0f2f5;/*blanco*/
+}
+
+body {
+    background-color: var(--bg-light);
+    font-family: 'Segoe UI', sans-serif;
+    
+}
+/* ocupar todo centrado */ 
+.mobile-container {
+    background: white;
+    min-height: 100vh;
+    width: 100%;
+    margin: 0 auto;
+    box-shadow: none; 
+}
+/* un poquito de jquery*/
+@media (min-width: 768px) {
+    .mobile-container {
+max-width: 1200px;
+        margin: 20px auto;
+        border-radius: 20px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        min-height: calc(100vh - 40px);
+    }
+}
+
+/* Bootstrap a morado y paleta morado con blanco */ 
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+.text-purple {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+

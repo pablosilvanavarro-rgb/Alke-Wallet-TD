@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enviar Dinero</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body onload="cargarDatos()">
+
+    <div class="mobile-container d-flex flex-column ">
+        
+        <nav class="navbar navbar-light bg-white border-bottom px-3 justify-content-between">
+            <a class="navbar-brand text-purple fw-bold" href="menu.html">Alke Wallet</a>
+            <a href="menu.html" class="btn btn-outline-secondary btn-sm rounded-pill px-3">
+                Volver
+            </a>
+        </nav>
+
+        <main class="container py-4 flex-grow-1">
+            <h4 class="mb-4">Enviar Dinero</h4>
+
+            <div class="alert alert-primary rounded-4 border-0 shadow-sm mb-4">
+                <p class="mb-0 small opacity-75">Saldo disponible:</p>
+                <h3 class="fw-bold text-primary m-0">$ <span id="saldoActual">0</span> CLP</h3>
+            </div>
+
+            <div class="card border-0 shadow-sm rounded-4 mb-4">
+                <div class="card-body p-4">
+                    <h5 class="text-purple mb-3">Nuevo Contacto</h5>
+                    <form id="form-agregar-contacto">
+                        <div class="mb-2">
+                            <input type="text" id="nombre-contacto" class="form-control bg-light border-0 " placeholder="Nombre completo" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" id="banco-contacto" class="form-control bg-light border-0" placeholder="Banco (Ej: Estado)" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="number" id="cuenta-contacto" class="form-control bg-light border-0" placeholder="N° Cuenta" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 rounded-pill">
+                            + Agregar a Agenda
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="card border-0 shadow-sm rounded-4">
+                <div class="card-body p-4">
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <h5 class="text-purple m-0">Mis Contactos</h5>
+                    </div>
+                    
+                    <input type="text" id="input-buscador" class="form-control mb-3" placeholder="🔍 Buscar contacto">
+
+                    <div class="table-responsive">
+                        <table class="table table-borderless align-middle" id="tabla-contactos">
+                            <thead class="border-bottom text-purple">
+                                <tr class="small text-muted text-purple">
+                                    <th>Nombre</th>
+                                    <th>Banco</th>
+                                    <th>Acción</th> </tr>
+                            </thead>
+                            <tbody>
+                                </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <div class="modal fade" id="modalTransferencia" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered ">
+            <div class="modal-content rounded-4 border-0">
+                <div class="modal-header border-0 pb-0">
+                    <h5 class="modal-title fw-bold">Transferir a <span id="nombre-destinatario" class="text-purple"></span></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body pt-2">
+                    <p class="text-muted small mb-4">Ingresa el monto que deseas enviar.</p>
+                    
+                    <label class="form-label fw-bold small">Monto:</label>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text border-0 bg-light">$</span>
+                        <input type="number" id="monto-transferencia" class="form-control border-0 bg-light fw-bold" placeholder="0">
+                    </div>
+                    <p id="mensaje-error" class="text-danger small fw-bold mb-0"></p>
+                </div>
+                <div class="modal-footer border-0 pt-0">
+                    <button type="button" class="btn btn-light rounded-pill px-4" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-primary rounded-pill px-4" id="btn-confirmar">Confirmar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+ <footer class="mt-2 text-muted big text-center">
+            &copy; 2026 Alke Wallet - Derechos reservados a PSilva
+        </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+
+</body>
+</html>
