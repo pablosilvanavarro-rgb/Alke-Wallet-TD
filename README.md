@@ -4,6 +4,7 @@
 Para ingresar a la aplicación, utiliza los siguientes datos simulados:
 
 Usuario (Email): pablo
+
 Contraseña: 123456
 
 **Alke Wallet** es una simulación de billetera virtual desarrollada como parte del bootcamp de desarrollo web. Este proyecto permite a los usuarios visualizar su saldo, realizar depósitos simulados, administrar una agenda de contactos y realizar transferencias.
